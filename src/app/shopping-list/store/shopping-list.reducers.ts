@@ -2,9 +2,9 @@ import { Action } from '@ngrx/store';
 import * as ShoppingListActions from './shopping-list.action';
 import { Ingredient } from '../../shared/ingredient.model';
 
-export interface AppState {
+/*export interface AppState {
   shoppingList: State
-}
+}*/
 
 export interface State {
   ingredients: Ingredient[];
