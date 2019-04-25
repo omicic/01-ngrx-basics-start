@@ -57,7 +57,9 @@ export function shoppingListReducer(state = initialState, action: ShoppingListAc
 			oldIngredients.splice(action.payload,1);
 			return {
 				...state,
-				ingredients: oldIngredients
+				ingredients: oldIngredients, 
+				editedIngredinet: null,
+				editedIngredientIndex: -1
 			}
 
 		case ShoppingListActions.START_EDIT:
