@@ -12,7 +12,6 @@ import * as fromShoppingList from '../store/shopping-list.reducers';
 import { Subscription } from 'rxjs/Subscription';
 
 import { Ingredient } from '../../shared/ingredient.model';
-import { ShoppingListService } from '../shopping-list.service';
 
 @Component({
   selector: 'app-shopping-edit',
