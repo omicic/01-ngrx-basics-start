@@ -1,17 +1,14 @@
 import * as AuthActions from './auth.actions';
 
+const initialState: State = {
+	token: null,
+	authenticated: false
+};
 
 export interface State {
  	token: string;
  	authenticated: boolean;
 }
-
-
-const initialState: State = {
-	token: null,
-	authenticated: false
-
-};
 
 export function authReducer(state = initialState, action: AuthActions.AuthActions){
 	switch(action.type) {
@@ -36,10 +33,6 @@ export function authReducer(state = initialState, action: AuthActions.AuthAction
 				authenticated: false
 			}	
 		
-
-		default: return state;
-			
-	}
-	
-	
+		default: return state;			
+	}	
 }
