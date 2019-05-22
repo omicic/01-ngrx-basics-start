@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 import * as AuthActions from './auth.actions';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/mergeMap';
 import { fromPromise } from 'rxjs/observable/fromPromise';
@@ -62,6 +63,13 @@ export class AuthEffects {
 		}
 		]
 	}); 
+
+	@Effect({dispatch: false})
+	authLogout = this.actions$
+	.ofType(AuthActions.LOGOUT)
+	.do(() =>{
+		this.router.navigate(['/']);
+	})
 
 
 //actions$ - not Observalbe, special property
